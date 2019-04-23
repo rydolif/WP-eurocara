@@ -1,0 +1,900 @@
+@import url(../libs/bootstrap/bootstrap-grid-flex.min.css);
+@import url(../libs/bootstrap/bootstrap-reboot.min.css);
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #000;
+  line-height: 1.75;
+  font-weight: 400; }
+
+::-moz-selection {
+  background-color: #000;
+  color: #fff; }
+
+::selection {
+  background-color: #000;
+  color: #fff; }
+
+a:hover, a:focus, div:hover, div:focus, ul:hover, ul:focus, li:hover, li:focus, input:hover, input:focus, textarea:hover, textarea:focus {
+  outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 60px; }
+
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 35px;
+  text-transform: uppercase; }
+  h2 span {
+    font-weight: 700; }
+
+h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 800;
+  padding-left: 45px;
+  position: relative;
+  margin-bottom: 15px; }
+  h3:before {
+    content: url(../img/like.png);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+i {
+  font-style: normal;
+  font-size: 16px;
+  color: #fff; }
+
+input {
+  border: #808080 1px solid;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+  width: 100%;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px; }
+  input:focus:required:invalid {
+    border-color: #808080;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-appearance: none; }
+  input:required:valid {
+    border-color: #808080;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-appearance: none; }
+  input::-webkit-input-placeholder {
+    color: #808080;
+    font-size: 14px;
+    line-height: 50px; }
+  input::-moz-placeholder {
+    color: #808080;
+    font-size: 14px;
+    line-height: 50px; }
+  input:-ms-input-placeholder {
+    color: #808080;
+    font-size: 14px;
+    line-height: 50px; }
+  input::-ms-input-placeholder {
+    color: #808080;
+    font-size: 14px;
+    line-height: 50px; }
+  input::placeholder {
+    color: #808080;
+    font-size: 14px;
+    line-height: 50px; }
+
+b, strong {
+  font-weight: 700; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+a,
+a:focus,
+a:hover {
+  outline: none;
+  text-decoration: none; }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #fff; }
+
+.pulse {
+  position: relative;
+  left: 50%;
+  top: 50vh;
+  margin: -40px 0 0 -40px; }
+
+.pulse::before, .pulse::after {
+  content: '';
+  border: 5px solid #FFCC00;
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute; }
+
+.pulse::before {
+  -webkit-animation: pulse-outer .8s ease-in infinite;
+          animation: pulse-outer .8s ease-in infinite; }
+
+.pulse::after {
+  -webkit-animation: pulse-inner .8s ease-in infinite;
+          animation: pulse-inner .8s ease-in infinite; }
+
+@-webkit-keyframes pulse-outer {
+  0% {
+    opacity: .1; }
+  50% {
+    opacity: .5; }
+  100% {
+    opacity: 0; } }
+
+@keyframes pulse-outer {
+  0% {
+    opacity: .1; }
+  50% {
+    opacity: .5; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes pulse-inner {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); } }
+
+@keyframes pulse-inner {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); } }
+
+@-webkit-keyframes btn {
+  0% {
+    left: -230%; }
+  100% {
+    left: 230%; } }
+
+@keyframes btn {
+  0% {
+    left: -230%; }
+  100% {
+    left: 230%; } }
+
+@-webkit-keyframes btn--img {
+  0% {
+    top: 50%; }
+  10% {
+    top: 40%; }
+  30% {
+    top: 60%; }
+  40% {
+    top: 50%; }
+  100% {
+    top: 50%; } }
+
+@keyframes btn--img {
+  0% {
+    top: 50%; }
+  10% {
+    top: 40%; }
+  30% {
+    top: 60%; }
+  40% {
+    top: 50%; }
+  100% {
+    top: 50%; } }
+
+@-webkit-keyframes btn--content {
+  0% {
+    top: 0; }
+  10% {
+    top: -10px; }
+  30% {
+    top: 10px; }
+  40% {
+    top: 0; }
+  100% {
+    top: 0; } }
+
+@keyframes btn--content {
+  0% {
+    top: 0; }
+  10% {
+    top: -10px; }
+  30% {
+    top: 10px; }
+  40% {
+    top: 0; }
+  100% {
+    top: 0; } }
+
+.btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 60px;
+  border: none;
+  outline: none;
+  padding: 0 90px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: #FFCC00;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  white-space: nowrap;
+  color: #000;
+  line-height: 63px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
+  z-index: 1; }
+  .btn::after {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    height: 95px;
+    width: 20px;
+    background: #fff;
+    -webkit-transform: translate(-50%, -50%) rotate(35deg);
+        -ms-transform: translate(-50%, -50%) rotate(35deg);
+            transform: translate(-50%, -50%) rotate(35deg);
+    z-index: -1;
+    -webkit-animation: 3s btn linear infinite;
+            animation: 3s btn linear infinite; }
+  .btn:hover, .btn:focus {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    color: #fff; }
+
+.form label.error {
+  position: absolute;
+  bottom: -25px;
+  right: 25px;
+  left: 25px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-animation: error .3s linear 1 forwards;
+          animation: error .3s linear 1 forwards;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  background-color: red;
+  -webkit-border-radius: 10px;
+          border-radius: 10px; }
+  .form label.error::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    margin-left: -2px;
+    border-bottom: 4px solid red;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid transparent; }
+
+.form div {
+  position: relative;
+  margin-bottom: 25px; }
+  .form div:last-child {
+    margin-bottom: 0; }
+
+.form__btn::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-image: url(../img/pdf.png);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  -webkit-animation: btn--img 3s infinite linear;
+          animation: btn--img 3s infinite linear; }
+
+.modal {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 1;
+  -webkit-border-radius: 15px;
+          border-radius: 15px; }
+  .modal .btn {
+    position: relative;
+    padding: 0 50px;
+    width: 100%;
+    z-index: 0; }
+  .modal h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px; }
+  .modal h3 {
+    font-size: 12px; }
+  .modal p {
+    text-align: center;
+    line-height: 1.2; }
+  .modal a {
+    color: #808080;
+    font-weight: 500; }
+  .modal__sub-title {
+    margin-bottom: 30px; }
+
+.close {
+  position: absolute;
+  right: -13px;
+  top: -13px;
+  display: block;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
+  width: 48px;
+  height: 48px;
+  background-color: #c4c4c4;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s; }
+  .close:hover, .close:focus {
+    outline: none;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+    .close:hover span, .close:focus span {
+      background: red; }
+  .close span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    -webkit-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    height: 22px;
+    width: 4px; }
+    .close span:first-child {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          -ms-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg); }
+    .close span:last-child {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          -ms-transform: translate(-50%, -50%) rotate(-45deg);
+              transform: translate(-50%, -50%) rotate(-45deg); }
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 55%;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border: none;
+  background-color: transparent;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .hamburger:focus, .hamburger:hover {
+    outline: none;
+    opacity: .7; }
+  .hamburger__box {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    -webkit-perspective: 80px;
+            perspective: 80px; }
+  .hamburger__item {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 3px;
+    background-color: #000;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    bottom: 0; }
+    .hamburger__item::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -10px;
+      background-color: #000;
+      width: 35px;
+      height: 3px;
+      -webkit-transition: -webkit-transform 0s 0.1s;
+      transition: -webkit-transform 0s 0.1s;
+      -o-transition: transform 0s 0.1s;
+      transition: transform 0s 0.1s;
+      transition: transform 0s 0.1s, -webkit-transform 0s 0.1s; }
+    .hamburger__item::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -20px;
+      background-color: #000;
+      width: 35px;
+      height: 3px;
+      -webkit-transition: -webkit-transform 0s 0.1s;
+      transition: -webkit-transform 0s 0.1s;
+      -o-transition: transform 0s 0.1s;
+      transition: transform 0s 0.1s;
+      transition: transform 0s 0.1s, -webkit-transform 0s 0.1s; }
+  .hamburger--active {
+    z-index: 1001; }
+    .hamburger--active .hamburger__item {
+      background-color: transparent;
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
+      .hamburger--active .hamburger__item::before {
+        -webkit-transform: translate3d(0, 0px, 0) rotate(45deg);
+                transform: translate3d(0, 0px, 0) rotate(45deg); }
+      .hamburger--active .hamburger__item::after {
+        -webkit-transform: translate3d(0, 10px, 0) rotate(-45deg);
+                transform: translate3d(0, 10px, 0) rotate(-45deg); }
+
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  padding: 7px 0;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  z-index: 1001; }
+  .header--active, .header--menu {
+    background-color: rgba(255, 255, 255, 0.95); }
+  .header__info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__container {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header__logo span {
+      display: inline-block;
+      margin-left: 15px;
+      line-height: 1;
+      color: #3E3E3E;
+      font-size: 15px;
+      font-weight: 700; }
+  .header__email {
+    margin-right: 50px; }
+    .header__email img {
+      margin-right: 10px; }
+    .header__email a {
+      color: #3E3E3E;
+      display: inline-block;
+      position: relative;
+      font-weight: 800; }
+      .header__email a::before {
+        content: '';
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+                transform: scale(0);
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000; }
+      .header__email a:hover, .header__email a:focus {
+        color: #000;
+        text-decoration: none; }
+        .header__email a:hover::before, .header__email a:focus::before {
+          -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+                  transform: scale(1); }
+  .header__phone {
+    position: relative;
+    padding-left: 60px; }
+    .header__phone_img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      z-index: 1; }
+      .header__phone_img::before, .header__phone_img::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        z-index: -1; }
+      .header__phone_img::before {
+        width: 57px;
+        height: 57px;
+        background-color: #ffcb08;
+        opacity: 0.17; }
+      .header__phone_img::after {
+        width: 82px;
+        height: 82px;
+        border: 1px solid #ffcb08;
+        -webkit-animation: pulse-inner 2s ease-in infinite;
+                animation: pulse-inner 2s ease-in infinite; }
+    .header__phone a {
+      display: inline-block;
+      color: #3E3E3E;
+      position: relative;
+      font-size: 16px;
+      font-weight: 800; }
+      .header__phone a::before {
+        content: '';
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+                transform: scale(0);
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000; }
+      .header__phone a:hover, .header__phone a:focus {
+        color: #000;
+        text-decoration: none; }
+        .header__phone a:hover::before, .header__phone a:focus::before {
+          -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+                  transform: scale(1); }
+    .header__phone span {
+      display: block;
+      font-size: 11px; }
+
+.main {
+  overflow: hidden; }
+
+.eurocara {
+  padding: 177px 0 62px;
+  background: url(../img/bg-1.png);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center; }
+  .eurocara__container {
+    position: relative; }
+  .eurocara__image {
+    position: absolute;
+    right: -270px;
+    bottom: -145px; }
+  .eurocara__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .eurocara__item {
+    -webkit-flex-basis: 44%;
+        -ms-flex-preferred-size: 44%;
+            flex-basis: 44%;
+    margin-bottom: 15px; }
+    .eurocara__item p {
+      font-size: 16px;
+      line-height: 20px; }
+  .eurocara__pdf {
+    position: relative;
+    margin-right: 30px;
+    -webkit-animation: btn--content 3s infinite linear;
+            animation: btn--content 3s infinite linear; }
+  .eurocara__btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.footer {
+  padding: 40px 0; }
+  .footer h2 {
+    margin-bottom: 35px; }
+  .footer__container {
+    padding: 20px 0 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 17px;
+    line-height: 21px;
+    position: relative; }
+    .footer__container:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+      height: 1px;
+      background: #ccc; }
+    .footer__container a {
+      color: #000;
+      text-decoration: underline;
+      cursor: pointer; }
+  .footer__col:last-child {
+    text-align: right; }
+
+@media only screen and (max-width: 1200px) {
+  .eurocara__container img {
+    display: block; }
+  .eurocara__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%; }
+  .eurocara__button {
+    float: none;
+    margin-top: 0; }
+  .eurocara__image {
+    right: auto;
+    left: 10%; }
+  .eurocara__pdf {
+    width: 180px !important; }
+  .btn {
+    padding: 0 50px; } }
+
+@media only screen and (max-width: 992px) {
+  .header__logo span {
+    display: none; }
+  .eurocara {
+    padding: 155px 0 60px; }
+    .eurocara__btn {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+  h2 {
+    font-size: 26px;
+    text-align: center; }
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .footer__col {
+    text-align: center;
+    margin-bottom: 15px; }
+    .footer__col:last-child {
+      text-align: center; } }
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 28px; }
+  h2 {
+    font-size: 20px; }
+  h1 br, h2 br, h3 br {
+    display: none; }
+  .header__container {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .header__info {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .header__email {
+    margin-right: 15px; }
+    .header__email img {
+      margin-right: 5px; }
+  .header__logo {
+    margin-right: 15px; }
+    .header__logo img {
+      width: 100px;
+      height: auto; }
+  .header__phone {
+    padding-left: 30px;
+    line-height: 1; }
+    .header__phone_img::before, .header__phone_img::after {
+      display: none; }
+  .header__email img, .header__phone img {
+    width: 25px; }
+  .eurocara {
+    padding: 100px 0 40px;
+    text-align: center; }
+    .eurocara__list {
+      text-align: left; }
+    .eurocara__content {
+      width: auto; }
+    .eurocara__image {
+      width: 100%;
+      bottom: -70px;
+      left: 50%; }
+    .eurocara__list {
+      width: 100%; }
+    .eurocara__button {
+      font-size: 18px;
+      margin-right: 0; }
+    .eurocara__btn img {
+      width: 150px; }
+    .eurocara__pdf {
+      margin-right: 15px; }
+  .footer br {
+    display: none; }
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
+  .footer__col:last-child {
+    text-align: center; } }
+
+@media only screen and (max-width: 576px) {
+  .header__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .header__email {
+    margin-right: 0;
+    margin-bottom: 10px; } }
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 30px; }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 15px; }
+  .header__logo img {
+    width: 90px;
+    height: auto; }
+  .eurocara__btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .eurocara__pdf {
+    margin-right: 0; }
+  .eurocara__container img {
+    display: none; }
+  .eurocara__item p {
+    font-size: 14px; }
+  .footer {
+    padding: 30px 0; }
+    .footer__container {
+      font-size: 14px; }
+  .modal {
+    padding: 30px;
+    max-width: 290px; }
+  .form__btn::before {
+    display: none; } }
